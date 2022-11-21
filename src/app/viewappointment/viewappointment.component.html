@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <!-- Displaying list of appointments -->
+    <Section class="container-fluid my-5">
+        <div class="container bg-dark rounded py-4">
+            <div class="h1 text-white" style="text-align: center;">
+                List of Appointments
+            </div>           
+            <p class="text-light" *ngIf="value==false">No Appointments</p>
+
+        </div>
+        
+    </Section>
+
+    <section class="container-fluid mb-5 py-5">
+        <div *ngIf="value" class="rounded my-5" >
+            <table class="table table-striped table-inverse table-responsive">
+                <thead class="thead-inverse">
+                    <tr>
+                        <th>Sr no.</th>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Address</th>
+                        <th>Email</th>
+                        <th>Age</th>
+                        <th>Trainer pref.</th>
+                        <th>Physio required</th>
+                        <th>Package</th>
+                        <th>Week</th>
+                        <th>Amount</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr scope="row" *ngFor="let a of list1; let i=index">
+                            <td>{{i+1}}</td>
+                            <td>{{a.name}}</td>
+                            <td>{{a.phno}}</td>
+                            <td>{{a.address}}</td>
+                            <td>{{a.email}}</td>
+                            <td>{{a.age}}</td>
+                            <td>{{a.trainer}}</td>
+                            <td>{{a.physio}}</td>
+                            <td>{{a.radio}}</td>
+                            <td>{{a.weeks}}</td>
+                            <td>{{a.amount}}</td>
+                        </tr>
+                    </tbody>
+            </table>
+        </div>
+    </section>
+
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+{
+  "appointment": [
+    {
+      "name": "Abhinav",
+    "email": "abc@xyz.com",
+    "age": "22",
+    "phno": "6363673873",
+    "address": "dsfs3",
+    "pincode": "32423",
+    "trainer": "male",
+    "physio": "yes",
+    "radio": "",
+    "amount": 0,
+    "weeks": 2
+    },
+    {
+      "name": "Raj",
+    "email": "dsfad@adsf.com",
+    "age": "12",
+    "phno": "98329847",
+    "address": "kdsafjl34",
+    "pincode": "2342",
+    "trainer": "male",
+    "physio": "yes",
+    "radio": "",
+    "amount": 0,
+    "weeks": 2
+    }
+  ],
+  "query": [
+    {
+      "name": "Abhinav",
+    "email": "adsfdsa@efeads.com",
+    "phno": "2343526",
+    "message": "hello this is a messsage"
+    }
+  ]
+}

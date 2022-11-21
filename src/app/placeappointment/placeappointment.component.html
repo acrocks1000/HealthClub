@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <!-- Appointment Start -->
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Appointment</h5>
+                        <h1>Place an appointment today!</h1>
+                        <img src="assets/happydoc.png" alt="doctor image" class="image-fluid d-none d-sm-block my-5">
+                    </div>
+
+                </div>
+                <div class="col-lg-6">
+                    <div class="bg-secondary text-center rounded p-5">
+                        <h1 class="mb-4">Place An Appointment</h1>
+                        <form #myform="ngForm">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="name" id="name"
+                                            placeholder="Enter Name" [(ngModel)]="form.name" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control border-0" name="email" id="email"
+                                            placeholder="Enter email" [(ngModel)]="form.email" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="age" id="age"
+                                            placeholder="Enter Age" [(ngModel)]="form.age" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="phno" id="phno"
+                                            placeholder="Enter Phone No" [(ngModel)]="form.phno" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="address" id="address"
+                                            placeholder="Enter Address" [(ngModel)]="form.address" required="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-6">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="city" id="city"
+                                            placeholder="Enter pincode" [(ngModel)]="form.pincode" required="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0 bg-secondary text-white"
+                                            style="font-size: large;" value="Trainer preference" [readOnly]="true">
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-check">
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" class="form-check-input" name="trainer" id="male"
+                                                value="Male" [(ngModel)]="form.trainer" [required]="true">
+                                            Male
+                                        </label>
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" class="form-check-input" name="trainer" id="female"
+                                                value="Female" [(ngModel)]="form.trainer" [required]="true">
+                                            Female
+                                        </label>
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" class="form-check-input" name="trainer" id="nppref"
+                                                value="No Preference" [(ngModel)]="form.trainer" [required]="true">
+                                            No Preference
+                                        </label>
+
+                                    </div>
+                                </div>
+
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0 bg-secondary text-white"
+                                            style="font-size: large;" value="Need Physiotherapist" [readOnly]="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-check">
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" class="form-check-input" name="physio" id="yes"
+                                                value="yes" [(ngModel)]="form.physio" [required]="true">
+                                            Yes
+                                        </label>
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" class="form-check-input" name="physio" id="no"
+                                                value="no" [(ngModel)]="form.physio" required>
+                                            No
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0 bg-secondary text-white"
+                                            style="font-size: large;" value="Select Package" [readOnly]="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-check">
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" id="one" name="package" value="one session"
+                                                [(ngModel)]="form.radio" #radio="ngModel" required>
+                                            One time(rs. 500)
+                                        </label>
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" id="four" name="package" value="four sessions"
+                                                [(ngModel)]="form.radio" #radio="ngModel" required>
+                                            Four time per week(rs.400 per session)
+                                        </label>
+                                        <label class="form-check-label mx-3 text-white">
+                                            <input type="radio" id="five" name="package" value="five sessions"
+                                                [(ngModel)]="form.radio" #radio="ngModel" required>
+                                            Five time per week(rs.300 per session)
+                                        </label>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12 mt-3">
+                                    <div class="form-group">
+                                        <label for="weeks" class="text-white"
+                                            *ngIf="form.radio==='four sessions'|| form.radio==='five sessions'">Weeks</label>
+                                        <input type="text" class="form-control border-0" name="weeks" id="weeks"
+                                            *ngIf="form.radio==='four sessions'||form.radio==='five sessions'"
+                                            [(ngModel)]="form.phno" [(ngModel)]="form.weeks"
+                                            placeholder="Should be greater than '1'" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0 bg-secondary text-white"
+                                            style="font-size: large;" value="Total Amount" [readOnly]="true">
+                                        <button class="btn btn-primary" (click)="getamount()">Calculate</button>
+                                        <input type="text" class="form-control border-0 bg-secondary text-white"
+                                            style="font-size: large;" id="amount" name="amount" value={{form.amount}}
+                                            [readOnly]="true">
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button [disabled]="myform.form.invalid" class="btn btn-primary w-100 py-3"
+                                        (click)="submit()" type="submit">Make An
+                                        Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Appointment End -->
+
+</body>
+
+</html>

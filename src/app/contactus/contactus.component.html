@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+
+    <div class="container-fluid py-5">
+        <div class="container">
+            <div class="row gx-5">
+                <div class="col-lg-6">
+                    <div class="bg-secondary text-center rounded p-5">
+                        <h1 class="mb-4">Drop a Query!</h1>
+                        <form #myform="ngForm">
+                            <div class="row g-3">
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="name" id="name"
+                                            placeholder="Enter Name" [(ngModel)]="form.name" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="email" class="form-control border-0" name="email" id="email"
+                                            placeholder="Enter email" [(ngModel)]="form.email" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control border-0" name="phno" id="phno"
+                                            placeholder="Enter Phone No" [(ngModel)]="form.phno" required="true">
+                                    </div>
+                                </div>
+                                <div class="col-12 col-sm-12">
+                                    <div class="form-group">
+                                        <textarea class="form-control border-0" rows="4" cols="50" id="message" name="message"
+                                            [(ngModel)]="form.message" #message="ngModel" placeholder="Enter your Message Here" required></textarea>
+
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button [disabled]="myform.form.invalid" class="btn btn-primary w-100 py-3"
+                                        (click)="submit()" type="submit">Make An
+                                        Appointment</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="mb-4">
+                        <h5 class="d-inline-block text-primary text-uppercase border-bottom border-5">Contact Us</h5>
+                        <p class="lead h6">HealthClub.co</p>
+                        <p class="">Street #321/312</p>
+                        <p class="">healty society,some Country</p>
+                        <p class="">Contact No: 9876543210</p>
+                        <img src="assets/medi-small.png" alt="query image" style="margin-top: -13vh;" class="image-fluid w-75 d-none d-sm-block">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

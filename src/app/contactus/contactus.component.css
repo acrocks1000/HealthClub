@@ -1,0 +1,11 @@
+body::before{
+    display: block;
+    content: '';
+    height: 5vh;
+}
+
+body{
+    background-attachment: scroll;
+    background-size: cover;
+    background-image: url(https://img.freepik.com/free-vector/clean-medical-background_53876-97927.jpg?w=996&t=st=1668876636~exp=1668877236~hmac=6f0231a4b634c6e1954d9d3c6293813a2c3e4237a42dff218f549b4835a3ace5);
+}
